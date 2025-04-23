@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc de Jornada Laboral - Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Joc de Jornada Laboral</h1>
+        <p>Relaciona conceptes sobre jornada laboral, descansos i nous entorns de treball</p>
+    </header>
+
+    <main>
+        <section class="jornada-game-section">
+            <div class="game-controls">
+                <div class="game-score">Puntuació: 0</div>
+                <div class="matched-pairs">Parelles emparellades: <span id="matched-count">0</span>/<span id="total-pairs">10</span></div>
+                <button id="resetJornada" class="game-button">Reiniciar Joc</button>
+                <a href="index.html" class="game-button">Tornar al Menú</a>
+            </div>
+
+            <div class="jornada-game">
+                <div class="jornada-concepts">
+                    <!-- Los conceptos se cargarán dinámicamente con JavaScript -->
+                </div>
+
+                <div class="jornada-definitions">
+                    <!-- Las definiciones se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+
+            <!-- Información sobre jornada laboral y nuevos entornos de trabajo -->
+            <div class="contract-info">
+                <div class="contract-type">
+                    <h3>Jornada Laboral</h3>
+                    <div class="contract-section">
+                        <h4>Definició:</h4>
+                        <p>Temps de treball efectiu diari o setmanal pactat. Actualment: màxim 40 hores setmanals de mitjana anual. Properament (al parlament): Reducció a 37,5 hores setmanals.</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Tipus de jornada:</h4>
+                        <ul class="characteristics-list">
+                            <li>Jornada completa: fins a 40 h/setmana (properament 37,5 h).</li>
+                            <li>Jornada parcial: menys de 40 h/setmana.</li>
+                            <li>Jornada regular: mateixes hores cada setmana.</li>
+                            <li>Jornada irregular: hores variables (amb preavís de 5 dies).</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Tipus d'horari:</h4>
+                        <ul class="characteristics-list">
+                            <li>Jornada continuada: sense pausa significativa.</li>
+                            <li>Jornada partida: amb pausa (mínim 1 hora habitualment).</li>
+                            <li>Horari flexible: inici/final ajustable dins un marge acordat.</li>
+                            <li>Torn rotatiu: alternança de torns (matí, tarda, nit).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Descansos</h3>
+                    <div class="contract-section">
+                        <h4>Descansos durant la jornada:</h4>
+                        <ul class="characteristics-list">
+                            <li>Treball de més de 6 hores: dret a una pausa mínima de 15 minuts.</li>
+                            <li>Treballadors menors de 18 anys: pausa mínima de 30 minuts després de 4,5 hores.</li>
+                            <li>La pausa pot ser computada o no com a temps de treball efectiu (depèn del conveni o acord).</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Descans entre jornades i setmanes:</h4>
+                        <ul class="characteristics-list">
+                            <li>Descans mínim entre jornades: 12 hores consecutives.</li>
+                            <li>Descans setmanal: mínim 1 dia i mig ininterromput.</li>
+                            <li>Possibilitat d'acumulació de descansos per conveni.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Hores Extraordinàries i Vacances</h3>
+                    <div class="contract-section">
+                        <h4>Hores extraordinàries:</h4>
+                        <ul class="characteristics-list">
+                            <li>Treball efectuat fora de la jornada ordinària.</li>
+                            <li>Límit: 80 hores extraordinàries anuals.</li>
+                            <li>Compensació preferentment amb descans equivalent.</li>
+                            <li>Treballadors menors d'edat: prohibides.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Vacances anuals:</h4>
+                        <ul class="characteristics-list">
+                            <li>Dret a 30 dies naturals de vacances per any treballat.</li>
+                            <li>Irrenunciables, no poden substituir-se per compensació econòmica.</li>
+                            <li>Fixació de dates per acord entre empresa i treballador.</li>
+                            <li>Avís previ mínim de 2 mesos sobre la data d'inici.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Nous Entorns de Treball</h3>
+                    <div class="contract-section">
+                        <h4>Flexiseguretat:</h4>
+                        <ul class="characteristics-list">
+                            <li>Combina flexibilitat laboral i protecció dels treballadors.</li>
+                            <li>Facilita adaptació al canvi i mobilitat laboral.</li>
+                            <li>Inclou formació contínua i suport a la transició professional.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Transformació digital:</h4>
+                        <ul class="characteristics-list">
+                            <li>Automatització de processos i ús de noves tecnologies.</li>
+                            <li>Transforma la manera de treballar i comunicar-se.</li>
+                            <li>Apareixen noves competències i perfils digitals.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Teletreball:</h4>
+                        <ul class="characteristics-list">
+                            <li>Treball remot pactat i regulat per contracte.</li>
+                            <li>Drets: desconnexió digital, control horari, igualtat salarial.</li>
+                            <li>Avantatges: flexibilitat, conciliació.</li>
+                            <li>Riscos: aïllament,difficulties de desconnexió.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Empreses de treball temporal (ETT):</h4>
+                        <ul class="characteristics-list">
+                            <li>Contractació de treballadors per cedir-los temporalment a altres empreses.</li>
+                            <li>Drets iguals en salari i condicions de treball que la plantilla fixa.</li>
+                            <li>Activitat regulada per normativa específica.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Plans d'Igualtat</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Inclou protocols contra l'assetjament laboral i sexual.</li>
+                            <li>Promouen igualtat d'oportunitats i eliminació de bretxes salarials.</li>
+                            <li>Obligatoris a empreses de 50 o més treballadors/es.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="jornada.js"></script>
+</body>
+</html> 

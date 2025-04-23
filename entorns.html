@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc de Nous Entorns de Treball - Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Joc de Nous Entorns de Treball</h1>
+        <p>Aprèn sobre flexiseguretat, transformació digital, teletreball i ETT</p>
+    </header>
+
+    <main>
+        <section class="entorns-game-section">
+            <div class="game-controls">
+                <div class="game-score">Puntuació: 0</div>
+                <div class="matched-pairs">Parelles emparellades: <span id="matched-count">0</span>/<span id="total-pairs">8</span></div>
+                <button id="resetEntorns" class="game-button">Reiniciar Joc</button>
+                <a href="index.html" class="game-button">Tornar al Menú</a>
+            </div>
+
+            <div class="jornada-game entorns-game">
+                <div id="concepts-container" class="entorns-concepts">
+                    <!-- Los conceptos se cargarán dinámicamente con JavaScript -->
+                </div>
+
+                <div id="definitions-container" class="entorns-definitions">
+                    <!-- Las definiciones se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+
+            <div id="game-message"></div>
+
+            <!-- Información sobre nuevos entornos de trabajo -->
+            <div class="jornada-info">
+                <h2>Informació sobre Nous Entorns de Treball</h2>
+                
+                <div class="jornada-info-block">
+                    <h3>Flexiseguretat</h3>
+                    <ul>
+                        <li>Combina flexibilitat laboral i protecció dels treballadors.</li>
+                        <li>Facilita adaptació al canvi i mobilitat laboral.</li>
+                        <li>Inclou formació contínua i suport a la transició professional.</li>
+                        <li>Equilibra necessitats empresarials i drets laborals.</li>
+                        <li>Model inspirat en països nòrdics, especialment Dinamarca.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Transformació Digital</h3>
+                    <ul>
+                        <li>Automatització de processos i ús de noves tecnologies.</li>
+                        <li>Transforma la manera de treballar i comunicar-se.</li>
+                        <li>Apareixen noves competències i perfils digitals.</li>
+                        <li>Necessitat de formació contínua per adaptar-se als canvis.</li>
+                        <li>Impacta tots els sectors econòmics i àmbits laborals.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Teletreball</h3>
+                    <ul>
+                        <li><strong>Definició:</strong> Treball remot pactat i regulat per contracte.</li>
+                        <li><strong>Drets:</strong> Desconnexió digital, control horari, igualtat salarial.</li>
+                        <li><strong>Avantatges:</strong> Flexibilitat, conciliació, reducció de desplaçaments.</li>
+                        <li><strong>Riscos:</strong> Aïllament, dificultat de desconnexió, precarització.</li>
+                        <li>L'empresa ha de proporcionar i mantenir els equips necessaris.</li>
+                        <li>Regulat a Espanya per la Llei 10/2021 de treball a distància.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Empreses de Treball Temporal (ETT)</h3>
+                    <ul>
+                        <li>Contractació de treballadors per cedir-los temporalment a altres empreses.</li>
+                        <li>Drets iguals en salari i condicions de treball que la plantilla fixa.</li>
+                        <li>Activitat regulada per normativa específica.</li>
+                        <li>Contracte de posada a disposició entre ETT i empresa usuària.</li>
+                        <li>Faciliten cobertura de necessitats temporals de personal.</li>
+                        <li>Prohibida la cessió en activitats perilloses i administracions públiques.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Plans d'Igualtat</h3>
+                    <ul>
+                        <li>Inclou protocols contra l'assetjament laboral i sexual.</li>
+                        <li>Promouen igualtat d'oportunitats i eliminació de bretxes salarials.</li>
+                        <li>Obligatoris a empreses de 50 o més treballadors/es.</li>
+                        <li>Mesures per facilitar conciliació laboral i familiar.</li>
+                        <li>Estableixen mecanismes de seguiment i avaluació.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="entorns.js"></script>
+</body>
+</html>

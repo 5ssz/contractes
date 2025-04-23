@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jocs de Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Jocs de Contractes de Treball</h1>
+        <p>Aprendeix sobre els contractes de treball de manera divertida</p>
+    </header>
+
+    <main>
+        <section class="animation-messages">
+            <div id="random-message" class="message" data-aos="fade-up"></div>
+        </section>
+        
+        <section class="games-menu">
+            <h2>Selecciona un Joc</h2>
+            <div class="games-grid">
+                <a href="quiz.html" class="game-card" data-aos="fade-up">
+                    <h3>Quiz de Contractes</h3>
+                    <p>Posa a prova els teus coneixements sobre els contractes de treball amb preguntes i respostes</p>
+                </a>
+                <a href="classification.html" class="game-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Joc de Classificació</h3>
+                    <p>Classifica els diferents tipus de contractes en les seves categories</p>
+                </a>
+                <a href="indemnitzacio.html" class="game-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Joc d'Indemnitzacions</h3>
+                    <p>Relaciona cada tipus d'acomiadament amb la seva indemnització corresponent</p>
+                </a>
+                <a href="jornada.html" class="game-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Joc de Jornada Laboral</h3>
+                    <p>Relaciona conceptes sobre jornada laboral, descansos i nous entorns de treball</p>
+                </a>
+                <a href="horarios.html" class="game-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Joc d'Horaris i Descansos</h3>
+                    <p>Aprèn sobre els diferents tipus d'horaris i descansos laborals</p>
+                </a>
+                <a href="entorns.html" class="game-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3>Joc de Nous Entorns de Treball</h3>
+                    <p>Aprèn sobre flexiseguretat, transformació digital, teletreball i ETT</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Mostrar un mensaje aleatorio
+        document.addEventListener('DOMContentLoaded', function() {
+            const mensajes = [
+                "Molts anims estudiant!!!!",
+                "Anims anims!!!",
+                "Bon diaaaaaaaaa",
+                "🐱",
+                "Estudia estudia mu bien mu bien"
+            ];
+            
+            const randomIndex = Math.floor(Math.random() * mensajes.length);
+            document.getElementById('random-message').textContent = mensajes[randomIndex];
+            
+            // Aplicar estilos especiales según el mensaje
+            if (randomIndex === 3) { // Si es el emoji del gato
+                document.getElementById('random-message').style.fontSize = '2.5rem';
+                document.getElementById('random-message').style.background = 'none';
+                document.getElementById('random-message').style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

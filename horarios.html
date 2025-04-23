@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc d'Horaris i Descansos - Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Joc d'Horaris i Descansos</h1>
+        <p>Aprèn sobre els diferents tipus d'horaris i descansos laborals</p>
+    </header>
+
+    <main>
+        <section class="horarios-game-section">
+            <div class="game-controls">
+                <div class="game-score">Puntuació: 0</div>
+                <div class="matched-pairs">Parelles emparellades: <span id="matched-count">0</span>/<span id="total-pairs">8</span></div>
+                <button id="resetHorarios" class="game-button">Reiniciar Joc</button>
+                <a href="index.html" class="game-button">Tornar al Menú</a>
+            </div>
+
+            <div class="jornada-game horarios-game">
+                <div id="concepts-container" class="horarios-concepts">
+                    <!-- Los conceptos se cargarán dinámicamente con JavaScript -->
+                </div>
+
+                <div id="definitions-container" class="horarios-definitions">
+                    <!-- Las definiciones se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+
+            <div id="game-message"></div>
+
+            <!-- Información sobre horarios y descansos laborales -->
+            <div class="jornada-info">
+                <h2>Informació sobre Horaris i Descansos Laborals</h2>
+                
+                <div class="jornada-info-block">
+                    <h3>Tipus d'Horari</h3>
+                    <ul>
+                        <li><strong>Jornada continuada:</strong> Sense pausa significativa, excepte petites pauses de descans.</li>
+                        <li><strong>Jornada partida:</strong> Amb pausa d'almenys 1 hora, dividint la jornada en dues parts.</li>
+                        <li><strong>Horari flexible:</strong> Inici i final ajustables dins un marge acordat, respectant hores totals.</li>
+                        <li><strong>Torn rotatiu:</strong> Alternança de torns (matí, tarda, nit) segons cicles preestablerts.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Descansos Durant la Jornada</h3>
+                    <ul>
+                        <li>Jornada superior a 6 hores: dret a pausa mínima de 15 minuts (descans).</li>
+                        <li>Treballadors menors de 18 anys: pausa mínima de 30 minuts després de 4,5 hores.</li>
+                        <li>La pausa pot computar-se o no com a temps de treball efectiu (segons conveni).</li>
+                        <li>Durant les pauses, el treballador no està sota la direcció de l'empresari.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Descans Entre Jornades</h3>
+                    <ul>
+                        <li><strong>Descans mínim diari:</strong> 12 hores consecutives entre el final d'una jornada i l'inici de la següent.</li>
+                        <li><strong>Descans setmanal:</strong> Mínim 1 dia i mig ininterromput (36 hores).</li>
+                        <li><strong>Acumulació:</strong> Possibilitat d'acumular el descans setmanal per períodes de fins a 14 dies.</li>
+                        <li>El descans és un dret irrenunciable del treballador.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Hores Extraordinàries</h3>
+                    <ul>
+                        <li>Treball efectuat fora de la jornada ordinària de treball.</li>
+                        <li>Límit màxim: 80 hores extraordinàries anuals.</li>
+                        <li>No computen les compensades amb descans en els 4 mesos següents.</li>
+                        <li>Prohibides per a menors de 18 anys i treballadors nocturns.</li>
+                        <li>Voluntàries, excepte pacte en contracte o conveni.</li>
+                        <li>Compensació: mínim valor hora ordinària o descans equivalent.</li>
+                    </ul>
+                </div>
+
+                <div class="jornada-info-block">
+                    <h3>Treball Nocturn</h3>
+                    <ul>
+                        <li>Realitzat entre les 22:00 i les 6:00 hores.</li>
+                        <li>Treballador nocturn: qui realitza almenys 3 hores en període nocturn o 1/3 de jornada anual.</li>
+                        <li>Retribució específica segons conveni (plus de nocturnitat).</li>
+                        <li>Prohibit per a menors de 18 anys.</li>
+                        <li>Jornada màxima: 8 hores diàries de mitjana en període de referència de 15 dies.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="horarios.js"></script>
+</body>
+</html> 

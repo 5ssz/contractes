@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc d'Indemnitzacions - Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Joc d'Indemnitzacions</h1>
+        <p>Relaciona cada tipus d'acomiadament amb la seva indemnització corresponent</p>
+    </header>
+
+    <main>
+        <section class="indemnitzacio-game-section">
+            <div class="game-controls">
+                <div class="game-score">Puntuació: 0</div>
+                <button id="resetIndemnitzacio" class="game-button">Reiniciar Joc</button>
+                <a href="index.html" class="game-button">Tornar al Menú</a>
+            </div>
+
+            <div class="indemnitzacio-game">
+                <div class="indemnitzacio-items">
+                    <div class="indemnitzacio-item" data-value="objectiu">Acomiadament Objectiu</div>
+                    <div class="indemnitzacio-item" data-value="improcedent">Acomiadament Improcedent</div>
+                    <div class="indemnitzacio-item" data-value="temporal">Finalització Contracte Temporal</div>
+                    <div class="indemnitzacio-item" data-value="disciplinari">Acomiadament Disciplinari</div>
+                    <div class="indemnitzacio-item" data-value="nul">Acomiadament Nul</div>
+                </div>
+
+                <div class="indemnitzacio-values">
+                    <div class="indemnitzacio-value" data-value="objectiu">20 dies per any</div>
+                    <div class="indemnitzacio-value" data-value="improcedent">33 dies per any</div>
+                    <div class="indemnitzacio-value" data-value="temporal">12 dies per any</div>
+                    <div class="indemnitzacio-value" data-value="disciplinari">Sense indemnització</div>
+                    <div class="indemnitzacio-value" data-value="nul">Readmissió obligatòria</div>
+                </div>
+            </div>
+
+            <!-- Información sobre extinción de contratos e indemnizaciones -->
+            <div class="contract-info">
+                <div class="contract-type">
+                    <h3>Extinció voluntària pel treballador</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Baixa voluntària: preavís, sense indemnització.</li>
+                            <li>Abandonament: sense preavís, pot generar sancions.</li>
+                            <li>Causes justificades: impagament, violència de gènere...</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Extinció per decisió de l'empresa</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Acomiadament disciplinari: per falta greu del treballador.</li>
+                            <li>Acomiadament objectiu: per causes econòmiques o tècniques.</li>
+                            <li>Acomiadament col·lectiu: ERO quan afecta a un nombre important de treballadors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Altres causes d'extinció</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Mort, jubilació o incapacitat del treballador o empresari.</li>
+                            <li>Força major (catàstrofes, cessament total d'activitat).</li>
+                            <li>Mutu acord o finalització del contracte temporal.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Qualificació judicial de l'acomiadament</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Procedent: justificat i legal.</li>
+                            <li>Improcedent: no justificat → indemnització.</li>
+                            <li>Nul: vulnera drets → readmissió obligatòria.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>La quitança i la indemnització</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Quitança: liquidació dels imports pendents.</li>
+                            <li>Indemnització per acomiadament objectiu: 20 dies per any treballat.</li>
+                            <li>Indemnització per acomiadament improcedent: 33 dies per any treballat.</li>
+                            <li>Indemnització per finalització de contracte temporal: 12 dies per any treballat.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Modificacions de les condicions</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Mobilitat funcional: canvi de funcions dins del grup.</li>
+                            <li>Mobilitat geogràfica: canvi de lloc de treball a una altra localitat.</li>
+                            <li>Modificació substancial: sou, jornada, horari... amb justificació.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Suspensió del contracte</h3>
+                    <div class="contract-section">
+                        <ul class="characteristics-list">
+                            <li>Interrupció temporal de l'activitat laboral.</li>
+                            <li>Exemples: excedència, maternitat/paternitat, ERTO.</li>
+                            <li>No s'extingeix el contracte.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="indemnitzacio.js"></script>
+</body>
+</html> 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joc de Classificació - Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Joc de Classificació</h1>
+        <p>Classifica els diferents tipus de contractes en les seves categories</p>
+    </header>
+
+    <main>
+        <section class="classification-game-section">
+            <div class="game-controls">
+                <div class="game-score">Puntuació: 0</div>
+                <div class="items-classified">Elements classificats: <span id="items-classified">0</span>/14</div>
+                <button id="resetClassification" class="game-button">Reiniciar Joc</button>
+                <a href="index.html" class="game-button">Tornar al Menú</a>
+            </div>
+
+            <div class="classification-game">
+                <div class="classification-categories">
+                    <div class="category" id="indefinit">
+                        <h3>Contractes Indefinits</h3>
+                        <div class="category-items"></div>
+                    </div>
+                    <div class="category" id="temporal">
+                        <h3>Contractes Temporals</h3>
+                        <div class="category-items"></div>
+                    </div>
+                    <div class="category" id="formatiu">
+                        <h3>Contractes Formatius</h3>
+                        <div class="category-items"></div>
+                    </div>
+                </div>
+
+                <div class="draggable-items">
+                    <!-- Contractes Indefinits -->
+                    <div class="draggable" data-category="indefinit">Contracte Indefinit Ordinari</div>
+                    <div class="draggable" data-category="indefinit">Contracte Fix Discontinu</div>
+                    <div class="draggable" data-category="indefinit">Contracte a Temps Completa</div>
+                    <div class="draggable" data-category="indefinit">Contracte a Temps Parcial</div>
+                    <div class="draggable" data-category="indefinit">Contracte Indefinit amb Incentius</div>
+
+                    <!-- Contractes Temporals -->
+                    <div class="draggable" data-category="temporal">Contracte per Circumstàncies</div>
+                    <div class="draggable" data-category="temporal">Contracte per Substitució</div>
+                    <div class="draggable" data-category="temporal">Contracte per Obra o Servei</div>
+                    <div class="draggable" data-category="temporal">Contracte d'Interinitat</div>
+
+                    <!-- Contractes Formatius -->
+                    <div class="draggable" data-category="formatiu">Contracte en Alternança</div>
+                    <div class="draggable" data-category="formatiu">Contracte de Pràctiques</div>
+                    <div class="draggable" data-category="formatiu">Contracte de Formació</div>
+                    <div class="draggable" data-category="formatiu">Contracte de Becari</div>
+                    <div class="draggable" data-category="formatiu">Contracte de Formació Professional</div>
+                </div>
+            </div>
+
+            <!-- Información sobre contratos laborales -->
+            <div class="contract-info">
+                <div class="contract-type">
+                    <h3>Contracte Indefinit</h3>
+                    <div class="contract-section">
+                        <h4>Finalitat:</h4>
+                        <p>No es fixa una data determinada d'acabament. També es coneixen com a contractes fixos, ja que són els que tenen els treballadors que formen part de la plantilla fixa o estable de l'empresa.</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Durada:</h4>
+                        <p>Indefinida</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Característiques:</h4>
+                        <ul class="characteristics-list">
+                            <li>Ordinari: pot ser a jornada completa (40 hores) o a jornada parcial (menys de 40 hores, com a mínim, 10).</li>
+                            <li>Fix discontinu: són intermitents en el temps. Estan enfocats principalment a treballs estacionals.</li>
+                            <li>Hi ha diverses modalitats d'incentius a la contractació indefinida. Si es treballa més de 18 mesos amb una altra modalitat de contracte, s'ha de passar a indefinit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Contracte Temporal</h3>
+                    <div class="contract-section">
+                        <h4>Finalitat:</h4>
+                        <p>Fixen una data determinada d'acabament de la relació laboral. S'ha de justificar la causa de la temporalitat i el motiu.</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Durada:</h4>
+                        <p>Determinada</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Característiques:</h4>
+                        <ul class="characteristics-list">
+                            <li>Circumstàncies de la producció: per circumstàncies de curta durada. Les causes poden ser previsibles o imprevisibles. En el primer cas, no pot durar més de 90 dies a l'any.</li>
+                            <li>Substitució d'una persona treballadora: s'utilitza en casos de substitució d'una persona de manera temporal (baixes per llicències o reduccions per maternitat/paternitat).</li>
+                            <li>La persona substituta es pot incorporar 15 dies abans de la substitució.</li>
+                            <li>No es poden fer hores extres, excepte en cas de força major. Es poden fer hores complementàries, sempre que no se superi la jornada completa.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Contractes Formatius</h3>
+                    <div class="contract-section">
+                        <h4>Per a la formació en alternança:</h4>
+                        <p>Finalitat: Compatibilitzar l'activitat laboral retribuïda amb els processos formatius.</p>
+                        <p>Durada: Determinada (mínim 3 mesos, màxim 2 anys)</p>
+                        <ul class="characteristics-list">
+                            <li>Enfocat a ensenyar i treballar a estudiants i facilitar la seva inserció al món laboral.</li>
+                            <li>La jornada s'ha d'adaptar als estudis.</li>
+                            <li>Les persones treballadores del primer any no poden superar el 65% de la jornada màxima; al segon any, el 85%.</li>
+                            <li>La retribució s'ha de calcular proporcionalment al temps treballat.</li>
+                            <li>No s'ha d'indemnitzar quan s'acaba el contracte.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Contracte formatiu per a l'obtenció de la pràctica professional:</h4>
+                        <p>Finalitat: Obtenir la pràctica professional adequada al nivell d'estudis.</p>
+                        <p>Durada: Determinada (mínim 6 mesos, màxim 1 any)</p>
+                        <ul class="characteristics-list">
+                            <li>Es pot contractar amb persones que tinguin un títol universitari o de formació professional, dins dels 3 anys posteriors a l'obtenció del títol.</li>
+                            <li>La durada ha de ser fixada per conveni.</li>
+                            <li>No es poden fer hores extres.</li>
+                            <li>Quan s'acaba el contracte, s'obté una certificació d'experiència adquirida.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="classification.js"></script>
+</body>
+</html> 

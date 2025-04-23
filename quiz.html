@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Contractes de Treball</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz de Contractes de Treball</h1>
+        <p>Posa a prova els teus coneixements sobre els contractes laborals</p>
+    </header>
+
+    <main>
+        <section class="quiz-section">
+            <div class="game-controls">
+                <div class="game-score">Puntuació: 0</div>
+                <div class="quiz-progress">Pregunta: <span id="current-question">1</span>/<span id="total-questions">10</span></div>
+                <button id="resetQuiz" class="game-button">Reiniciar Quiz</button>
+                <a href="index.html" class="game-button">Tornar al Menú</a>
+            </div>
+
+            <div class="quiz-container">
+                <div class="question-container">
+                    <div id="question" class="question">
+                        <!-- La pregunta se cargará dinámicamente con JavaScript -->
+                    </div>
+                    <div id="options" class="options">
+                        <!-- Las opciones se cargarán dinámicamente con JavaScript -->
+                    </div>
+                </div>
+                <div id="feedback" class="feedback">
+                    <!-- Aquí se mostrará el feedback de la respuesta -->
+                </div>
+                <button id="next-button" class="game-button next-button">Següent</button>
+            </div>
+
+            <!-- Información de tipos de contratos -->
+            <div class="contract-info">
+                <div class="contract-type">
+                    <h3>Contracte Indefinit</h3>
+                    <div class="contract-section">
+                        <h4>Finalitat:</h4>
+                        <p>No es fixa una data determinada d'acabament. També es coneixen com a contractes fixos, ja que són els que tenen els treballadors que formen part de la plantilla fixa o estable de l'empresa.</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Durada:</h4>
+                        <p>Indefinida</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Característiques:</h4>
+                        <ul class="characteristics-list">
+                            <li>Ordinari: pot ser a jornada completa (40 hores) o a jornada parcial (menys de 40 hores, com a mínim, 10).</li>
+                            <li>Fix discontinu: són intermitents en el temps. Estan enfocats principalment a treballs estacionals.</li>
+                            <li>Hi ha diverses modalitats d'incentius a la contractació indefinida. Si es treballa més de 18 mesos amb una altra modalitat de contracte, s'ha de passar a indefinit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Contracte Temporal</h3>
+                    <div class="contract-section">
+                        <h4>Finalitat:</h4>
+                        <p>Fixen una data determinada d'acabament de la relació laboral. S'ha de justificar la causa de la temporalitat i el motiu.</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Durada:</h4>
+                        <p>Determinada</p>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Característiques:</h4>
+                        <ul class="characteristics-list">
+                            <li>Circumstàncies de la producció: per circumstàncies de curta durada. Les causes poden ser previsibles o imprevisibles. En el primer cas, no pot durar més de 90 dies a l'any.</li>
+                            <li>Substitució d'una persona treballadora: s'utilitza en casos de substitució d'una persona de manera temporal. La persona substituta es pot incorporar 15 dies abans de la substitució.</li>
+                            <li>Pot ser en jornada completa o parcial.</li>
+                            <li>No es poden fer hores extres, excepte en cas de força major.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contract-type">
+                    <h3>Contractes Formatius</h3>
+                    <div class="contract-section">
+                        <h4>Formació en alternança:</h4>
+                        <p>Finalitat: Compatibilitzar l'activitat laboral retribuïda amb els processos formatius.</p>
+                        <p>Durada: Determinada (mínim 3 mesos, màxim 2 anys)</p>
+                        <ul class="characteristics-list">
+                            <li>Enfocat a ensenyar i treballar a estudiants i facilitar la seva inserció al món laboral.</li>
+                            <li>La jornada s'ha d'adaptar als estudis.</li>
+                            <li>Les persones treballadores del primer any no poden superar el 65% de la jornada màxima; al segon any, el 85%.</li>
+                            <li>La retribució s'ha de calcular proporcionalment al temps treballat.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Contracte de pràctiques:</h4>
+                        <p>Finalitat: Obtenir la pràctica professional adequada al nivell d'estudis.</p>
+                        <p>Durada: Determinada (mínim 6 mesos, màxim 1 any)</p>
+                        <ul class="characteristics-list">
+                            <li>Per a persones que tinguin un títol universitari o de formació professional, dins dels 3 anys posteriors a l'obtenció del títol.</li>
+                            <li>La durada ha de ser fixada per conveni.</li>
+                            <li>No es poden fer hores extres.</li>
+                            <li>S'obté una certificació d'experiència adquirida al finalitzar.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contract-type">
+                    <h3>Altres aspectes importants</h3>
+                    <div class="contract-section">
+                        <h4>Modificacions de les condicions:</h4>
+                        <ul class="characteristics-list">
+                            <li>Mobilitat funcional: canvi de funcions dins del grup.</li>
+                            <li>Mobilitat geogràfica: canvi de lloc de treball a una altra localitat.</li>
+                            <li>Modificació substancial: sou, jornada, horari... amb justificació.</li>
+                        </ul>
+                    </div>
+                    <div class="contract-section">
+                        <h4>Extinció del contracte:</h4>
+                        <ul class="characteristics-list">
+                            <li>Baixa voluntària: preavís, sense indemnització.</li>
+                            <li>Acomiadament objectiu: causes econòmiques o tècniques (20 dies/any).</li>
+                            <li>Acomiadament improcedent: no justificat (33 dies/any).</li>
+                            <li>Acomiadament disciplinari: falta greu (sense indemnització).</li>
+                            <li>Finalització contracte temporal: 12 dies/any.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per a l'aprenentatge de contractes de treball</p>
+    </footer>
+
+    <script src="quiz.js"></script>
+</body>
+</html> 
